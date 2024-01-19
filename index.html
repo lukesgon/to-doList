@@ -12,54 +12,28 @@
 </head>
 
 <body>
-  <script src="./index.js"></script>
   <nav class="nav">
     <img src="./assets/rocket.svg" alt="">
     <h1>Todo<span>List</span></h1>
   </nav>
-
+  
+  
   <form name="formTask">
-
-
+    
     <input type="text" name="description" id="description" placeholder="Adicionar tarefas" /> <br />
-
-
-    <button type="button">Salvar</button>
-
+    
+    <button type="submit" id="add-task">Salvar</button>
+    
   </form>
 
-  <fieldset>
-    <legend>Tarefas:</legend>
-    <ul>
+  <main>
+    <section>
+      <h3 id="title">Tarefas:</h3>
+    </section>
+    <section id ='canvas'></section>
+  </main>
 
-      <li>
-        <input type="checkbox" class="Li" id="item2" name="listItem" />
-        <label class="Li">nsvdlkndlkndslknvklcsdkcvçdvm</label>
-        <img class="lixeira" src="./assets/Layer 2.svg" alt="">
-      </li>
-      <li>
-        <input type="checkbox" class="Li" id="item2" name="listItem" />
-        <label class="Li">nsvdlkndlkndslknvklcsdkcvçdvm</label>
-        <img class="lixeira" src="./assets/Layer 2.svg" alt="">
-      </li>
-      <li>
-        <input type="checkbox" class="Li" id="item2" name="listItem" />
-        <label class="Li">nsvdlkndlkndslknvklcsdkcvçdvm</label>
-        <img class="lixeira" src="./assets/Layer 2.svg" alt="">
-      </li>
-      <li>
-        <input type="checkbox" class="Li" id="item2" name="listItem" />
-        <label class="Li">nsvdlkndlkndslknvklcsdkcvçdvm</label>
-        <img class="lixeira" src="./assets/Layer 2.svg" alt="">
-      </li>
-      <li>
-        <input type="checkbox" class="Li" id="item2" name="listItem" />
-        <label class="Li">nsvdlkndlkndslknvklcsdkcvçdvm</label>
-        <img class="lixeira" src="./assets/Layer 2.svg" alt="">
-      </li>
-    </ul>
-  </fieldset>
-
+  <script src="./js/canvas.js" defer></script>
 </body>
 
 </html>
