@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: var(--Gray-100, #f2f2f2);
+}
+body {
+  background-color: rgba(26, 26, 26, 1);
+}
+
+.nav {
+  width: 100%;
+  height: 200px;
+  flex-shrink: 0;
+  background: var(--Gray-700, #0d0d0d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav > h1 {
+  color: var(--Orange, #f2994a);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+
+.nav > h1 > span {
+  color: var(--Blue, #4ea8de);
+}
+
+.nav > img {
+  height: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  padding: auto;
+  margin-bottom: 30px;
+}
+
+form > input {
+  margin-left: auto;
+  width: 680px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(38, 38, 38, 1);
+  color: rgba(128, 128, 128, 1);
+  font-size: 30px;
+  border-radius: 5px;
+  padding-left: 10px;
+
+  
+}
+
+form > button {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: auto;
+  background-color: rgba(30, 111, 159, 1);
+  border-radius: 5px;
+}
+
+fieldset {
+  height: 200px;
+  display: flex;
+  width: 736px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin: auto;
+}
+
+fieldset > legend {
+  color: #4ea8de;
+}
+
+fieldset > ul {
+  list-style: none;
+  width: 100%;
+  height: 50px;
+}
+
+fieldset > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin-left: 0px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: rgba(38, 38, 38, 1);
+}
+
+fieldset > ul > li > label {
+  color: rgba(128, 128, 128, 1);
+  margin-left: 10px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #999;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '✔'; 
+  font-size: 16px; 
+  color: #4ea8de; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Li {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.lixeira {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: 20px;
+}
