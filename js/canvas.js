@@ -31,6 +31,7 @@ class Task {
     taskCreator() {
         const articleElement = document.createElement('article');
         articleElement.classList.add('task-article');
+        articleElement.id = `id${this.taskId}`; //necessario ter id antes do numero
         
         const descriptionSectionElement = document.createElement('section');
         descriptionSectionElement.classList.add('description-section');
@@ -52,6 +53,7 @@ class Task {
         
         const trashBtnElement = document.createElement('button');
         trashBtnElement.classList.add('trash-button');
+        trashBtnElement.addEventListener('click', (e) => {this.taskDelete()})
         
         const trashImgElement = document.createElement('img');
         trashImgElement.src = './assets/trash.svg';
@@ -71,6 +73,17 @@ class Task {
 
         return articleElement;
     };
+
+    // deleta o elemento HTML/Objeto do tasklist
+    taskDelete(){
+        document.querySelector(`#id${this.taskId}`).remove()
+        taskList.forEach((item, index, object) =>  {
+            if (item.taskId == this.taskId) {
+              object.splice(index, 1);
+            }
+          });
+    }
+
 };
 
 addTask.addEventListener('click', (event) => {
@@ -86,4 +99,3 @@ addTask.addEventListener('click', (event) => {
 
     descriptionInput.value = '';
 });
-
