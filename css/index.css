@@ -55,6 +55,8 @@ form > input {
   font-size: 30px;
   border-radius: 5px;
   padding-left: 10px;
+
+  
 }
 
 form > button {
@@ -69,7 +71,6 @@ form > button {
 }
 
 fieldset {
-  
   height: 200px;
   display: flex;
   width: 736px;
@@ -87,7 +88,6 @@ fieldset > ul {
   list-style: none;
   width: 100%;
   height: 50px;
- 
 }
 
 fieldset > ul > li {
@@ -98,14 +98,37 @@ fieldset > ul > li {
   height: 50px;
   margin-left: 0px;
   margin-top: 5px;
-  border-radius: 5px; background-color: rgba(38, 38, 38, 1);
+  border-radius: 5px;
+  background-color: rgba(38, 38, 38, 1);
 }
 
 fieldset > ul > li > label {
   color: rgba(128, 128, 128, 1);
-  margin-left: 10px; /* Adiciona margem à esquerda do label */
+  margin-left: 10px;
 }
 
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #999;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '✔'; 
+  font-size: 16px; 
+  color: #4ea8de; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .Li {
   margin-top: 5px;
   margin-left: 20px;
@@ -116,4 +139,3 @@ fieldset > ul > li > label {
   margin-left: auto;
   margin-right: 20px;
 }
-
