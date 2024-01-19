@@ -1,8 +1,6 @@
-console.log('Hello World')
 const canvas = document.getElementById('canvas');
 const addTask = document.getElementById('add-task');
 const taskList = [];
-
 
 class Task {
     
@@ -88,3 +86,4 @@ addTask.addEventListener('click', (event) => {
 
     descriptionInput.value = '';
 });
+
