@@ -189,4 +189,5 @@ input[type="checkbox"]:checked::before {
 
 .trash-button {
   background-color: rgba(38, 38, 38, 1);
+  cursor: pointer;
 }
