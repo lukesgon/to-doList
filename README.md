@@ -7,7 +7,6 @@ Este é um gerenciador simples de tarefas feito com JavaScript puro. Ele permite
 - Adicionar tarefas
 - Remover tarefas
 - Editar tarefas cadastradas
-- Limpar todas as tarefas
 - Persistência de dados no navegador usando o `localStorage`
 
 ## Como usar
