@@ -150,6 +150,11 @@ input[type="checkbox"]:checked::before {
   padding-left: 10px;
 }
 
+.editDescription{
+  background-color: rgba(38, 38, 38, 1);
+  border: 1px solid white;
+}
+
 .options-section {
   width: 3%;
   display: flex;
@@ -165,3 +170,13 @@ input[type="checkbox"]:checked::before {
   background-color: rgba(38, 38, 38, 1);
   cursor: pointer;
 }
+.edit-button {
+  background-color: rgba(38, 38, 38, 1);
+  cursor: pointer;
+}
+
+.edit-button > img{
+  width: 20px;
+  margin-left: 5px;
+}
+

@@ -70,6 +70,20 @@ class Task {
         trashImgElement.alt = "Trash Icon";
         trashImgElement.classList = 'lixeira';
 
+        // edit element
+
+        const editBtnElement = document.createElement('button');
+        editBtnElement.classList.add('edit-button');
+        editBtnElement.addEventListener('click', (e) => {this.taskEditMode()})
+        
+        const editImgElement = document.createElement('img');
+        editImgElement.src = './assets/edit.svg';
+        editImgElement.alt = "Edit Icon";
+        editImgElement.classList = 'editar';
+        
+
+        editBtnElement.appendChild(editImgElement);
+
         trashBtnElement.appendChild(trashImgElement);
 
         descriptionSectionElement.appendChild(idElement);
@@ -77,6 +91,8 @@ class Task {
         descriptionSectionElement.appendChild(descriptionElement);
 
         optionsSectionElement.appendChild(trashBtnElement);
+        optionsSectionElement.appendChild(editBtnElement);
+
 
         articleElement.appendChild(descriptionSectionElement);
         articleElement.appendChild(optionsSectionElement);
@@ -95,6 +111,16 @@ class Task {
         });
     }
 
+    // essa permite a ediçao da descrição da tarefa pelo usuario e atualiza o localstorage
+    taskEditMode(){
+        document.querySelector(`#id${this.taskId} .description`).innerHTML = `   <input type="text" class="editDescription" name="" id="">        `
+        document.querySelector(`#id${this.taskId} .editDescription`).addEventListener("change", (e) => {
+            this.description = e.target.value
+            document.querySelector(`#id${this.taskId} .description`).innerHTML = `${this.description}`
+            atualizaLocalStorage()
+        })
+    }
+        
 };
 
 addTask.addEventListener('click', (event) => {
